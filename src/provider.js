@@ -11,11 +11,11 @@ export default class extends Component {
     static propTypes = {
         children: PropTypes.element.isRequired,
         store
-    }
+    };
 
     static childContextTypes = {
         store
-    }
+    };
 
     getChildContext() {
         return { store: this._store }

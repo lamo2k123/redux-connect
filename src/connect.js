@@ -10,7 +10,7 @@ export default ComponentConnect => class extends Component {
 
     static contextTypes = { store };
 
-    static propTypes = { store }
+    static propTypes = { store };
 
     constructor() {
         super(...arguments);
@@ -39,7 +39,7 @@ export default ComponentConnect => class extends Component {
         if(state != store) {
             this.setState(this.connect(this.store.getState()));
         }
-    }
+    };
 
     componentDidMount() {
         this.unsubscribe = this.store.subscribe(this.subscribe);
