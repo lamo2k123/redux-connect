@@ -23,8 +23,7 @@ export default class extends Component {
 
     constructor(props) {
         super(...arguments);
-
-        console.log('PROVIDER props', props);
+        
         this._store = props.store
     }
 
