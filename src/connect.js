@@ -8,7 +8,7 @@ const store = PropTypes.shape({
 
 export default ComponentConnect => class extends Component {
 
-    static contextTypes = { store };
+    static contextTypes = { ...ComponentConnect.contextTypes, store };
 
     static propTypes = { store };
 
