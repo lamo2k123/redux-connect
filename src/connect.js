@@ -4,13 +4,13 @@ const store = PropTypes.shape({
     dispatch    : PropTypes.func.isRequired,
     getState    : PropTypes.func.isRequired,
     subscribe   : PropTypes.func.isRequired
-}).isRequired;
+});
 
 export default ComponentConnect => class extends Component {
 
-    static contextTypes = { ...ComponentConnect.contextTypes, store };
+    static contextTypes = { ...ComponentConnect.contextTypes, store : store.isRequired };
 
-    static propTypes = { store };
+    static propTypes = { ...ComponentConnect.contextTypes, store };
 
     constructor() {
         super(...arguments);
